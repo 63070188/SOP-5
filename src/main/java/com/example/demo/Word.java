@@ -1,8 +1,12 @@
 package com.example.demo;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Word {
+public class Word implements Serializable {
     public ArrayList<String> badWord;
     public ArrayList<String> goodWords;
 
